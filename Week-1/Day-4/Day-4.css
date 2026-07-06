@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* CSS variables let us reuse the same colors in many places. */
+  --bg: #f3f7fb;
+  --surface: #ffffff;
+  --ink: #1f2933;
+  --muted: #52606d;
+  --accent: #0b7285;
+  --border: #d8e1ea;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* linear-gradient blends one color into another smoothly. */
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+  color: var(--ink);
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.site {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-items {
+  list-style: none;
+  display: grid;
+  font-size: 1rem;
+  font-weight: bold;
+  /* gap works here because the list is set to grid. */
+  gap: 1rem;
+}
+
+.menu-items li {
+  color: var(--accent);
+  /* Transition makes hover color and movement change smoothly. */
+  transition:
+    color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.menu-items li:hover {
+  color: crimson;
+  transform: translateX(4%);
+  cursor: pointer;
+}
+
+.site-header,
+.site-footer,
+.sidebar,
+.panel,
+.cards {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 10px 26px rgba(31, 41, 51, 0.05);
+}
+
+.site-header,
+.site-footer,
+.sidebar,
+.panel {
+  padding: 1rem;
+}
+
+.site-header,
+.site-footer {
+  margin-bottom: 1rem;
+}
+
+.layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.feature-card {
+  flex: 1 1 10rem;
+  min-height: 8rem;
+  border-radius: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(11, 114, 133, 0.95),
+    rgba(76, 201, 240, 0.75)
+  );
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+.sidebar ul {
+  padding-left: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+p,
+li {
+  color: var(--muted);
+}
+
+@media (min-width: 48rem) {
+  .layout {
+    grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr) minmax(
+        14rem,
+        18rem
+      );
+    align-items: start;
+  }
+
+  .content {
+    min-height: 100%;
+  }
+}

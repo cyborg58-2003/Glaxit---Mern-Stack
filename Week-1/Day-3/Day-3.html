@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 - Holy Grail Layout</title>
+    <link rel="stylesheet" href="Day-3.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <h1>Holy Grail Layout</h1>
+            <p>Header, left sidebar, main content, right sidebar, and footer built with CSS Grid.</p>
+        </header>
+
+        <div class="layout">
+            <aside class="sidebar left-sidebar">
+                <h2>Navigation</h2>
+                <ul>
+                    <li>Overview</li>
+                    <li>Services</li>
+                    <li>Gallery</li>
+                    <li>Pricing</li>
+                </ul>
+            </aside>
+
+            <main class="content">
+                <section class="intro">
+                    <h2>Main Content</h2>
+                    <p>
+                        This section uses Flexbox to align a simple gallery of placeholder cards.
+                    </p>
+                </section>
+
+                <!-- aria-label gives screen readers a name for this gallery section. -->
+                <section class="gallery" aria-label="Product gallery">
+                    <article class="product-card card-one">
+                        <h3>Card One</h3>
+                        <p>Structured content with a clean visual block.</p>
+                    </article>
+                    <article class="product-card card-two">
+                        <h3>Card Two</h3>
+                        <p>Flexible spacing that adapts across the row.</p>
+                    </article>
+                    <article class="product-card card-three">
+                        <h3>Card Three</h3>
+                        <p>Simple placeholders showing card alignment.</p>
+                    </article>
+                    <article class="product-card card-four">
+                        <h3>Card Four</h3>
+                        <p>Responsive wrapping with Flexbox.</p>
+                    </article>
+                </section>
+            </main>
+
+            <aside class="sidebar right-sidebar">
+                <h2>Notes</h2>
+                <p>Use grid for page structure and flex for internal alignment.</p>
+            </aside>
+        </div>
+
+        <footer class="site-footer">
+            <p>Day 3 CSS Grid and Flexbox practice.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 - Portfolio Landing Page</title>
+    <link rel="stylesheet" href="Day-5.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+            <a class="brand" href="#home">Hamza Tariq</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <section class="hero" id="home">
+            <section class="left">
+                <p class="eyebrow">Front-End Developer Portfolio</p>
+                <h1>Building purposeful web experiences with semantic HTML and thoughtful CSS.</h1>
+
+                <div class="hero-actions">
+                    <a class="button primary" href="#projects">View Projects</a>
+                    <a class="button secondary" href="#contact">Contact Me</a>
+                </div>
+
+            </section>
+            <section class="right">
+                <img src="./hamza-profile.jpg" alt="Hamza Tariq" class="profile-image">
+            </section>
+        </section>
+    </header>
+
+
+    <main>
+        <section class="about section-card" id="about">
+            <div>
+                <p class="section-label">About Me</p>
+                <h2>Designing with structure first</h2>
+                <p>
+                    I focus on clear hierarchy, accessibility, and layouts that feel balanced on every screen size.
+                </p>
+            </div>
+            <div class="about-grid">
+                <article>
+                    <h3>What I value</h3>
+                    <p>Semantic markup, strong spacing, and readable interfaces.</p>
+                </article>
+                <article>
+                    <h3>What I build</h3>
+                    <p>Clean landing pages, responsive card layouts, and user-friendly forms.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-card" id="projects">
+            <p class="section-label">Projects</p>
+            <h2>Selected Work</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Resume Builder</h3>
+                    <p>Semantic resume layout with table-based skills and contact form.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Grid Showcase</h3>
+                    <p>Holy Grail webpage layout built using CSS Grid and Flexbox.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Responsive Landing</h3>
+                    <p>Mobile-first portfolio page with strong visual hierarchy.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-card contact" id="contact">
+            <p class="section-label">Contact</p>
+            <h2>Let’s talk</h2>
+            <form>
+                <div class="field-row">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required minlength="3" placeholder="Your name">
+                </div>
+                <div class="field-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+                <div class="field-row">
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">Choose one</option>
+                        <option>Project inquiry</option>
+                        <option>Job opportunity</option>
+                        <option>General question</option>
+                    </select>
+                </div>
+                <div class="field-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required minlength="20"
+                        placeholder="Write your message"></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Designed for Day 5 of the practical.</p>
+    </footer>
+</body>
+
+</html>

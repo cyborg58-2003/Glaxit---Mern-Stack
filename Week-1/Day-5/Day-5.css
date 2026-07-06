@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f172a;
+  --bg-soft: #111c33;
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+  --ink: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #f97316;
+  --accent-2: #38bdf8;
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(56, 189, 248, 0.25),
+      transparent 28%
+    ),
+    radial-gradient(circle at right, rgba(249, 115, 22, 0.22), transparent 24%),
+    linear-gradient(180deg, #08111f 0%, var(--bg) 100%);
+  min-height: 100vh;
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  backdrop-filter: blur(14px);
+}
+
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+}
+
+.nav-toggle-label span {
+  width: 1.4rem;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 999px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.brand {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.nav-links a,
+.hero-actions .button {
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-links a {
+  color: var(--ink);
+  padding: 0.65rem 1rem;
+  background: transparent;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  background: var(--surface-strong);
+  outline: none;
+}
+
+.hero {
+  min-height: 72vh;
+  height: 100vh;
+  display: grid;
+  /* clamp keeps the hero heading between a minimum, flexible, and maximum size. */
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  align-content: center;
+  gap: 1.25rem;
+  padding: clamp(2rem, 6vw, 5rem) 0;
+}
+
+.hero .left {
+  display: grid;
+  gap: 1.25rem;
+}
+.eyebrow,
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-2);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.hero .right {
+  display: grid;
+  place-items: center;
+  gap: 1.25rem;
+  overflow: hidden;
+  border-radius: 5rem;
+}
+
+.profile-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 360px;
+  min-width: 360px;
+  min-height: 200px;
+  aspect-ratio: 4 / 5;
+  /* object-fit keeps the image filling the box without distortion. */
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.hero h1,
+.section-card h2 {
+  font-family: "Playfair Display", serif;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 5.5rem);
+  line-height: 0.98;
+  max-width: 12ch;
+}
+
+.hero p,
+.project-card p,
+.about p,
+.site-footer p {
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.button {
+  padding: 0.9rem 1.25rem;
+}
+
+.primary {
+  background: var(--accent);
+  color: #111827;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+.primary:hover,
+.primary:focus-visible,
+.secondary:hover,
+.secondary:focus-visible {
+  transform: translateY(-1px);
+}
+
+.section-card {
+  margin-top: 1.25rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+}
+
+.about {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.about-grid,
+.project-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-grid article,
+.project-card {
+  padding: 1.25rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+
+.project-grid {
+  margin-top: 1rem;
+}
+
+.project-card {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.02)
+    ),
+    var(--surface);
+}
+
+.contact form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.field-row {
+  display: grid;
+  gap: 0.55rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(8, 17, 31, 0.35);
+  color: var(--ink);
+}
+
+select {
+  /* Remove native browser styling so the custom dropdown arrow can show. */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 3rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--accent-2) 50%),
+    linear-gradient(135deg, var(--accent-2) 50%, transparent 50%);
+  background-position:
+    calc(100% - 1.35rem) calc(50% - 2px),
+    calc(100% - 1rem) calc(50% - 2px);
+  background-size: 0.5rem 0.5rem;
+  background-repeat: no-repeat;
+}
+
+select option {
+  color: #111827;
+  background: #ffffff;
+}
+
+select:invalid {
+  color: #94a3b8;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid rgba(56, 189, 248, 0.25);
+  outline-offset: 2px;
+  border-color: var(--accent-2);
+}
+
+button {
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.25rem;
+  background: linear-gradient(135deg, var(--accent), #fb923c);
+  color: #111827;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.site-footer {
+  padding: 1.5rem 0 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .nav-toggle-label {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 0 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+  }
+
+  /* First line rotates to form the top of the X icon. */
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  /* Middle line disappears so the burger becomes a close icon. */
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* Third line rotates to form the bottom of the X icon. */
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Show the hidden nav links when the checkbox is checked. */
+  .nav-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+    text-align: center;
+    padding: 2rem 0 3rem;
+  }
+
+  .hero .left {
+    justify-items: center;
+  }
+
+  .hero .right {
+    width: 100%;
+  }
+
+  .profile-image {
+    width: min(100%, 320px);
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .field-row {
+    grid-template-columns: 180px minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .contact form {
+    gap: 0.9rem;
+  }
+}

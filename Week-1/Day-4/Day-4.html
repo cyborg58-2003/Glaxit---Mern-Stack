@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 - Responsive Holy Grail</title>
+    <link rel="stylesheet" href="Day-4.css">
+</head>
+
+<body>
+    <div class="site">
+        <header class="site-header">
+            <h1>Responsive Holy Grail Layout</h1>
+            <p>Mobile-first columns that stack on small screens and expand on larger screens.</p>
+        </header>
+
+        <div class="layout">
+            <aside class="sidebar left">
+                <h2>Menu</h2>
+                <ul class="menu-items" aria-label="Primary navigation">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </aside>
+
+            <main class="content">
+                <section class="panel">
+                    <h2>Main Content</h2>
+                    <p>
+                        This page starts as a single-column mobile layout and becomes a grid on tablets and desktops.
+                    </p>
+                </section>
+
+                <section class="cards" aria-label="Feature cards">
+                    <article class="feature-card">Flex item one</article>
+                    <article class="feature-card">Flex item two</article>
+                    <article class="feature-card">Flex item three</article>
+                    <article class="feature-card">Flex item four</article>
+                </section>
+            </main>
+
+            <aside class="sidebar right">
+                <h2>Updates</h2>
+                <p>Use relative units, media queries, and flexible containers.</p>
+            </aside>
+        </div>
+
+        <footer class="site-footer">
+            <p>Day 4 responsive design practice.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

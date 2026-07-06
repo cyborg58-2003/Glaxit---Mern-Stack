@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 - Semantic HTML5 Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav aria-label="Primary">
+            <ul class="nav-items">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero" id="profile">
+            <p class="eyebrow">Aspiring Front-End Developer</p>
+            <h1>Hamza Tariq</h1>
+            <p>
+                A detail-oriented learner focused on building clean, responsive,
+                and accessible web interfaces using semantic HTML, CSS, and modern development practices.
+            </p>
+        </section>
+    </header>
+
+    <main>
+        <section aria-labelledby="summary-title">
+            <h2 id="summary-title">Professional Summary</h2>
+            <article>
+                <p>
+                    I enjoy turning structured content into readable, accessible pages.
+                    My current focus is strengthening fundamentals in HTML5, CSS layout, and user-friendly form design.
+                </p>
+                <ul>
+                    <li>Strong interest in semantic markup and accessibility</li>
+                    <li>Learning responsive layout techniques</li>
+                    <li>Practicing clean content structure and reusable styles</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="experience" aria-labelledby="experience-title">
+            <h2 id="experience-title">Experience</h2>
+            <article>
+                <h3>Web Development Intern Project</h3>
+                <p><strong>Focus:</strong> Semantic HTML5 and structured content</p>
+                <ol>
+                    <li>Built a text-only resume page using semantic sections.</li>
+                    <li>Organized content into accessible navigation and meaningful landmarks.</li>
+                    <li>Added a form with validation-ready input types and required fields.</li>
+                </ol>
+            </article>
+        </section>
+
+        <section id="education" aria-labelledby="education-title">
+            <h2 id="education-title">Education</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Qualification</th>
+                        <th scope="col">Institution</th>
+                        <th scope="col">Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Intermediate in Progress</td>
+                        <td>Academic Institute</td>
+                        <td>2026</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development Training</td>
+                        <td>Glaxit Internship Program</td>
+                        <td>2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Skill</th>
+                        <th scope="col">Level</th>
+                        <th scope="col">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Beginner</td>
+                        <td>Semantic structure, forms, tables</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Beginner</td>
+                        <td>Layout, spacing, responsive styling</td>
+                    </tr>
+                    <tr>
+                        <td>Problem Solving</td>
+                        <td>Growing</td>
+                        <td>Breaking tasks into smaller steps</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact Form</h2>
+            <form>
+                <div class="form-row">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required minlength="3"
+                        placeholder="Enter your name">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}" placeholder="Digits only">
+                </div>
+
+                <div class="form-row">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required minlength="5"
+                        placeholder="Reason for contacting">
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required minlength="20"
+                        placeholder="Write your message here"></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Hamza Tariq. Built with semantic HTML5.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 - CSS Basics & Box Model</title>
+    <link rel="stylesheet" href="Day-2.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <nav class="topbar" aria-label="Primary">
+            <a href="#summary">Summary</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <section class="hero" id="summary">
+            <p class="eyebrow">Day 2 Study Focus</p>
+            <h1>Hamza Tariq</h1>
+            <p>
+                Clean resume layout styled with CSS selectors, specificity, the box model,
+                custom web fonts, and interactive form states.
+            </p>
+        </section>
+    </header>
+
+    <main class="layout">
+        <section class="card">
+            <h2>Profile Summary</h2>
+            <p>
+                I build semantic pages with clear hierarchy, comfortable spacing, and readable typography.
+            </p>
+            <ul>
+                <li>Semantic HTML structure</li>
+                <li>Box model control with margin, border, and padding</li>
+                <li>Accessible forms and readable content blocks</li>
+            </ul>
+        </section>
+
+        <section class="card" id="skills">
+            <h2>Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Level</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Strong</td>
+                        <td>Semantic structure and forms</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Growing</td>
+                        <td>Selectors, spacing, layout, colors</td>
+                    </tr>
+                    <tr>
+                        <td>Accessibility</td>
+                        <td>Growing</td>
+                        <td>Labels, landmarks, focus states</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card" id="education">
+            <h2>Education</h2>
+            <ol>
+                <li>Web Development Internship Training</li>
+                <li>Front-End Fundamentals</li>
+                <li>Responsive Design Practice</li>
+            </ol>
+        </section>
+
+        <section class="card" id="contact">
+            <h2>Contact Form</h2>
+            <form>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required minlength="3" placeholder="Your full name">
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required minlength="10"
+                        placeholder="Write your message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Day 2 CSS Basics and Box Model</p>
+    </footer>
+</body>
+
+</html>
